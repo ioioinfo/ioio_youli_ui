@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>有利商家后台管理</title>
+    <style media="screen">
+    *{
+       padding: 0;
+       margin: 0;
+     }
+      html,body{
+        min-width: 1024px;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+      li{
+        list-style: none;
+      }
+      a{
+        text-decoration: none;
+      }
+      p{
+        color: #fff;
+      }
+      .top{
+        font-size: 0;
+      }
+      .top .left{
+        width: 16%;
+        height: 700px;
+        background: #080808;
+        display: inline-block;
+      }
+      .header{
+        width: 100%;
+        font-size: 0;
+        margin-bottom: 75px;
+      }
+      .header-left{
+        width:80px;
+        height:80px;
+        border-radius: 50%;
+        background: #fff;
+        display: inline-block;
+        vertical-align: middle;
+        margin:10px 27px;
+      }
+      .header-left img{
+        width: 80px;
+        border-radius: 50%;
+        vertical-align: middle;
+      }
+      .header-right{
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .header-right p{
+        height: 40px;
+        line-height:40px;
+
+      }
+      .bottom{
+        width: 85%;
+        margin: 15px auto;
+      }
+      .bottom .bottom-ul a{
+        display: block;
+        display: flex;
+        color: #fff;
+        margin-bottom: 30px;
+      }
+      .bottom .bottom-ul a li{
+        flex: 1;
+        font-size: 14px;
+        height: 30px;
+      }
+      .bottom .bottom-ul .word2{
+        line-height: 30px;
+      }
+      .bottom .bottom-ul a .word1{
+        text-align: center;
+        line-height: 30px;
+
+      }
+      .bottom .bottom-ul a .word1 img{
+        width: 20px;
+        height: 24px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .bottom .bottom-ul a .word3{
+        text-align: center;
+        line-height: 30px;
+      }
+      .bottom .bottom-ul a .word3 .number{
+        width: 18px;
+        height: 18px;
+        border-radius: 9px;
+        background: #fff;
+        text-align: center;
+        line-height: 18px;
+        display: inline-block;
+      }
+      .bottom .bottom-ul a .word3 .number span{
+        color:#e84e40;
+
+      }
+      .right{
+        width: 84%;
+        display: inline-block;
+        vertical-align:top;
+      }
+      .right .list .list-ul{
+        display: flex;
+        height: 132px;
+        border-bottom: 1px solid #e0dae0;
+        box-shadow: 0 2px 0 #e0dae0;
+      }
+      .right .list .list-ul li{
+        flex: 1;
+
+      }
+      .right .list .list-ul li a{
+        display: block;
+      }
+      .right .list .list-ul li a p{
+        width: 100px;
+        height: 74px;
+        margin: 29px auto;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .right .list .list-ul li a p span{
+        display: block;
+        text-align: center;
+        line-height: 20px;
+      }
+      .right .list .list-ul .list-infor1 p{
+        background: #da6e6b;
+
+      }
+      .right .list .list-ul .list-infor1 p span{
+        line-height: 74px;
+      }
+      .right .list .list-ul .infor p span:first-child{
+        padding-top: 18px;
+      }
+      .right .list .list-ul .list-infor2 p{
+        background: #7278b2;
+
+      }
+      .right .list .list-ul .list-infor3 p{
+        background: #4db2a2;
+      }
+      .right .list .list-ul .list-infor4 p{
+        background: #55acd7;
+      }
+      .right .list .list-ul .list-infor5 p{
+        background: #74cfd0;
+      }
+      .right-nav{
+        width: 100%;
+        height: 44px;
+        border-bottom: #f7f2f7;
+      }
+      .right-nav span{
+        font-size: 12px;
+        height: 44px;
+        line-height: 44px;
+        display: inline-block;
+        text-align: center;
+        border-bottom: #f7f2f7;
+      }
+      .right-nav span:first-child{
+        width: 40px;
+      }
+      .right-nav span:nth-child(4n+2){
+        width: 122px;
+      }
+      .right-nav span:nth-child(4n+3){
+        width: 766px;
+      }
+      .right-nav span:last-child{
+        width: 122px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="left">
+        <div class="header">
+          <div class="header-left">
+            <img src="images/header.png" alt="">
+          </div>
+          <div class="header-right">
+            <p>李小二</p>
+            <p>0527</p>
+          </div>
+        </div>
+        <div class="bottom">
+          <ul class="bottom-ul">
+            <a href="#">
+              <li class="word1"><img src="images/img-02.png" alt=""></li>
+              <li class="word2">返利申请</li>
+              <li class="word3"><p class="number"><span>99</span></p></li>
+            </a>
+          </ul>
+          <ul class="bottom-ul">
+            <a href="#">
+              <li class="word1"><img src="images/img-01.png" alt=""></li>
+              <li class="word2">返利申请</li>
+              <li class="word3"></li>
+            </a>
+          </ul>
+          <ul class="bottom-ul">
+            <a href="#">
+              <li class="word1"><img src="images/img-03.png" alt=""></li>
+              <li class="word2">返利申请</li>
+              <li class="word3"><p class="number"><span>99</span></p></li>
+            </a>
+          </ul>
+          <ul class="bottom-ul">
+            <a href="#">
+              <li class="word1"><img src="images/img-04.png" alt=""></li>
+              <li class="word2">返利申请</li>
+              <li class="word3"></li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="right">
+        <div class="list">
+          <ul class="list-ul">
+            <li class="list-infor1"><a href="#"><p><span>创建项目</span></p></a></li>
+            <li class="list-infor2 infor"><a href="#"><p><span>客户预约</span><span>共1条</span></p></a></li>
+            <li class="list-infor3 infor"><a href="#"><p><span>未上架</span><span>共2条</span></p></a></li>
+            <li class="list-infor4 infor"><a href="#"><p><span>待审核</span><span>共3条</span></p></a></li>
+            <li class="list-infor5 infor"><a href="#"><p><span>已审核</span><span>共4条</span></p></a></li>
+          </ul>
+        </div>
+        <div class="right-nav">
+          <span>选择</span><span>图片</span><span>文字信息</span><span>操作</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
