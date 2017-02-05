@@ -8,21 +8,76 @@
         padding: 0;
         margin: 0;
        }
+       body,html{
+         height: 100%;
+       }
+       img{
+         width: 25px;
+         height: 25px;
+       }
       .warp{
         width: 90%;
-        height: 450px;
+        height: 100%;
         margin: 0 auto;
         background: #3E4E67;
-        padding-top: 150px;
+        overflow: hidden;
+        /*padding-top: 150px;*/
       }
       .warp .login{
         width: 310px;
-        height: 203px;
+        height: 235px;
         background: #495E7B;
         margin: 0 auto;
+        margin-top: 150px;
+        text-align: center;
+        position: relative;
+      }
+      input{
+        width: 200px;
+        margin-bottom: 20px;
+        height: 25px;
+        text-indent: 30px;
+        background: #EAEFF5;
+        border: none;
       }
       .login .bianhao{
         margin-top: 15px;
+      }
+      .bianhao-img{
+        position: absolute;
+        top: 15px;
+        left: 55px;
+      }
+      .first-img{
+        position: absolute;
+        top: 60px;
+        left: 55px;
+      }
+      .second-img{
+        position: absolute;
+        top: 105px;
+        left: 55px;
+      }
+      .third-img{
+        position: absolute;
+        top: 150px;
+        left: 55px;
+      }
+      .number{
+        position: absolute;
+        top: 150px;
+        left: 206px;
+      }
+      .submit{
+        text-indent: 0;
+        background: #1AB395;
+        font-weight: bold;
+        color: #fff;
+      }
+      .logo{
+        position: absolute;
+        top: -25px;
+        left:-10px;
       }
     </style>
   </head>
@@ -33,7 +88,27 @@
         <input type="text" name="" value="" placeholder="输入帐号" class="first">
         <input type="text" name="" value="" placeholder="输入密码" class="second">
         <input type="text" name="" value="" placeholder="请输入验证码" class="third">
+        <div class="bianhao-img">
+          <img src="images/img-06.png" alt="">
+        </div>
+        <div class="first-img">
+          <img src="images/img-07.png" alt="">
+        </div>
+        <div class="second-img">
+          <img src="images/img-08.png" alt="">
+        </div>
+        <div class="third-img">
+          <img src="images/img-09.png" alt="">
+        </div>
+        <div class="number">
+          <img src="images/img-10.png" alt="" style="width:45px;height:25px;">
+        </div>
+        <div class="logo">
+          <img src="images/img-11.png" alt="" style="width:128px;height:43px;">
+        </div>
+        <input type="submit" name="" value="登 录" class="submit">
       </div>
+
     </div>
   </body>
 </html>
