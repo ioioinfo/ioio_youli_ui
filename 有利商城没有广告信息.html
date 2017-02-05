@@ -67,8 +67,8 @@
 
       }
       .bottom{
-        width: 85%;
-        margin: 15px auto;
+        width: 100%;
+        margin: 0 auto;
       }
       .bottom-ul-style{
         background: #8f8d8f;
@@ -83,6 +83,14 @@
         flex: 1;
         font-size: 14px;
         height: 30px;
+      }
+      .bottom .bottom-ul a li:first-child{
+        text-align: right;
+        padding-right: 15px;
+      }
+      .bottom .bottom-ul a li:last-child{
+        text-align: left;
+        padding-left: 15px;
       }
       .bottom .bottom-ul .word2{
         line-height: 30px;
@@ -332,10 +340,11 @@
 
         overflow: scroll;
         overflow-x:visible;
-        text-align: center;
+
       }
-      .warp img{
+      .warp .images{
         margin-top: 100px;
+        margin-left: 462px;
       }
       .footer{
         width: 100%;
@@ -412,7 +421,7 @@
           <span>选择</span><span>图片</span><span>文字信息</span><span>操作</span>
         </div>
         <div class="warp">
-          <img src="images/img-12.png" alt="">
+          <img src="images/img-12.png" alt="" class="images">
         </div>
         <div class="right-bottom">
           <p>
