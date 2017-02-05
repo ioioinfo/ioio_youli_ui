@@ -24,21 +24,26 @@
       }
       .top{
         font-size: 0;
+
+
+        overflow: hidden;
       }
       .top .left{
         width: 16%;
         height: 700px;
-        background: #080808;
+        background: #666;
         display: inline-block;
+
       }
       .header{
         width: 100%;
         font-size: 0;
-        margin-bottom: 75px;
+        margin-top: 20px;
+        margin-bottom: 55px;
       }
       .header-left{
-        width:80px;
-        height:80px;
+        width:60px;
+        height:60px;
         border-radius: 50%;
         background: #fff;
         display: inline-block;
@@ -46,7 +51,7 @@
         margin:10px 27px;
       }
       .header-left img{
-        width: 80px;
+        width: 60px;
         border-radius: 50%;
         vertical-align: middle;
       }
@@ -96,26 +101,29 @@
       .bottom .bottom-ul a .word3 .number{
         width: 18px;
         height: 18px;
+        font-size: 12px;
         border-radius: 9px;
-        background: #fff;
+        background: #e84e40;
         text-align: center;
         line-height: 18px;
         display: inline-block;
       }
       .bottom .bottom-ul a .word3 .number span{
-        color:#e84e40;
+        color:#fff;
 
       }
       .right{
         width: 84%;
         display: inline-block;
         vertical-align:top;
+        height: 700px;
+        box-shadow: -2px 0 40px #2b2b2b;
       }
       .right .list .list-ul{
         display: flex;
-        height: 132px;
-        border-bottom: 1px solid #e0dae0;
-        box-shadow: 0 2px 0 #e0dae0;
+        height: 100px;
+        border-bottom: 1px solid #f0e6f0;
+        box-shadow: 0 5px 0 #f7f5f7;
       }
       .right .list .list-ul li{
         flex: 1;
@@ -123,14 +131,16 @@
       }
       .right .list .list-ul li a{
         display: block;
+
       }
       .right .list .list-ul li a p{
         width: 100px;
-        height: 74px;
-        margin: 29px auto;
+        height: 60px;
+        margin: 20px auto;
         color: #fff;
         font-size: 14px;
         font-weight: bold;
+        border-radius: 4px;
       }
       .right .list .list-ul li a p span{
         display: block;
@@ -142,10 +152,10 @@
 
       }
       .right .list .list-ul .list-infor1 p span{
-        line-height: 74px;
+        line-height: 62px;
       }
       .right .list .list-ul .infor p span:first-child{
-        padding-top: 18px;
+        padding-top: 10px;
       }
       .right .list .list-ul .list-infor2 p{
         background: #7278b2;
@@ -160,10 +170,16 @@
       .right .list .list-ul .list-infor5 p{
         background: #74cfd0;
       }
+      .right .list .list-ul .list-infor6 p{
+        background: #74cfd0;
+      }
+      .right .list .list-ul .list-infor6 p span{
+        line-height: 62px;
+      }
       .right-nav{
         width: 100%;
+        border-bottom: 1px solid #f7f2f7;
         height: 44px;
-        border-bottom: #f7f2f7;
       }
       .right-nav span{
         font-size: 12px;
@@ -171,20 +187,157 @@
         line-height: 44px;
         display: inline-block;
         text-align: center;
-        border-bottom: #f7f2f7;
+
       }
       .right-nav span:first-child{
-        width: 40px;
+        width: 50px;
       }
       .right-nav span:nth-child(4n+2){
         width: 122px;
       }
       .right-nav span:nth-child(4n+3){
-        width: 766px;
+        width: 756px;
       }
       .right-nav span:last-child{
         width: 122px;
       }
+      .right-nav-height{
+        height: 118px;
+        border-bottom: 1px solid #f7f2f7;
+      }
+      .right-nav-height .checkbox{
+        width: 50px;
+        text-align: center;
+        display: inline-block;
+        line-height: 118px;
+      }
+      .right-nav-height .adimg img{
+        display: inline-block;
+        width: 122px;
+        height: 98px;
+        vertical-align: middle;
+      }
+      .right-nav-height .adimg{
+        width: 122px;
+        height: 98px;
+        display: inline-block;
+      }
+      .right-nav-height .ad{
+        width:756px;
+        height: 118px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .right-nav-height .ad .ad-word1{
+        width:756px;
+        font-size: 12px;
+        color: #646464;
+        text-align: left;
+        line-height: 25px;
+        display: inline-block;
+        padding-left: 5px;
+        padding-top: 10px;
+      }
+      .right-nav-height .ad .ad-word2{
+        width:756px;
+        font-size: 12px;
+        display: inline-block;
+        overflow: hidden;
+      }
+      .right-nav-height .ad .ad-word2 .money{
+        color: #e51c23;
+        line-height: 48px;
+
+      }
+      .right-nav-height .ad .ad-word2 .rebate{
+        display: inline-block;
+        font-size: 12px;
+        float: right;
+        margin-top: 17px;
+      }
+      .right-nav-height .ad .ad-word2 .rebate .rebate1{
+        display: inline-block;
+        width: 78px;
+        border: 1px solid #646464;
+        text-align: center;
+        margin-right: 10px;
+        color: #646464;
+      }
+      .right-nav-height .operation{
+        display: inline-block;
+        width: 122px;
+        height: 118px;
+        vertical-align: middle;
+      }
+      .right-nav-height .operation p{
+
+        width: 60px;
+        height: 26px;
+        line-height: 26px;
+        font-size: 14px;
+        margin: 15px auto;
+        text-align: center;
+
+      }
+      .right-nav-height .operation p:first-child{
+        background: #ffa726;
+        border-radius: 4px;
+
+      }
+      .right-nav-height .operation p:last-child{
+        background: #ab47bc;
+        border-radius: 4px;
+        margin-top: 15px;
+      }
+      .right .right-bottom{
+        width: 96%;
+        margin: 0 auto;
+        height: 46px;
+        line-height: 46px;
+        text-align: right;
+        background: #eff2f7;
+      }
+      .right .right-bottom p{
+        display: inline-block;
+        margin-right: 40px;
+      }
+      .right .right-bottom p span a{
+        font-size: 12px;
+        color: #03a9f4;
+      }
+      .right .right-bottom p span{
+        font-size: 12px;
+        color: #03a9f4;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      .right .right-bottom p .remove a{
+        color: #ff4081;
+      }
+      .right .right-bottom p .remove{
+
+        margin-left: 15px;
+      }
+      .warp{
+        width: 100%;
+        height: 476px;
+        overflow: scroll;
+        overflow-x:visible;
+      }
+      .footer{
+        width: 100%;
+        height: 25px;
+        background: #d1e1eb;
+        text-align: center;
+      }
+      .footer span{
+        font-size: 12px;
+        color: #b0b8bb;
+        display: inline-block;
+        margin: 0 15px;
+
+      }
+
     </style>
   </head>
   <body>
@@ -210,21 +363,21 @@
           <ul class="bottom-ul">
             <a href="#">
               <li class="word1"><img src="images/img-01.png" alt=""></li>
-              <li class="word2">返利申请</li>
+              <li class="word2">返利成功</li>
               <li class="word3"></li>
             </a>
           </ul>
           <ul class="bottom-ul">
             <a href="#">
               <li class="word1"><img src="images/img-03.png" alt=""></li>
-              <li class="word2">返利申请</li>
-              <li class="word3"><p class="number"><span>99</span></p></li>
+              <li class="word2">客户申诉</li>
+              <li class="word3"><p class="number"><span>3</span></p></li>
             </a>
           </ul>
           <ul class="bottom-ul">
             <a href="#">
               <li class="word1"><img src="images/img-04.png" alt=""></li>
-              <li class="word2">返利申请</li>
+              <li class="word2">返利统计</li>
               <li class="word3"></li>
             </a>
           </ul>
@@ -238,12 +391,73 @@
             <li class="list-infor3 infor"><a href="#"><p><span>未上架</span><span>共2条</span></p></a></li>
             <li class="list-infor4 infor"><a href="#"><p><span>待审核</span><span>共3条</span></p></a></li>
             <li class="list-infor5 infor"><a href="#"><p><span>已审核</span><span>共4条</span></p></a></li>
+            <li class="list-infor6"><a href="#"><p><span>商家信息</span></p></a></li>
+
           </ul>
         </div>
         <div class="right-nav">
           <span>选择</span><span>图片</span><span>文字信息</span><span>操作</span>
         </div>
+        <div class="warp">
+          <div class="right-nav-height">
+            <span class="checkbox"><input type="checkbox" name="" value=""></span>
+            <span class="adimg"><img src="images/img-05.png" alt=""></span>
+            <span class="ad">
+              <p class="ad-word1">罗伯特机器人培训学校，试学一个月不收任何费用，两年包教会，其他的就不说了，抓紧时间,罗伯特机器人培训学校，试学一个月不收任何费用，两年包教会，其他的就不说了，抓紧时间</p>
+              <div class="ad-word2"><span class="money">18888元</span><p class="rebate"><span class="rebate1">预约返利10%</span><span class="rebate1">推荐返利8%</span></p></div>
+            </span>
+            <div class="operation"><p>删除</p><p>编辑</p></div>
+          </div>
+          <div class="right-nav-height">
+            <span class="checkbox"><input type="checkbox" name="" value=""></span>
+            <span class="adimg"><img src="images/img-05.png" alt=""></span>
+            <span class="ad">
+              <p class="ad-word1">罗伯特机器人培训学校，试学一个月不收任何费用，两年包教会，其他的就不说了，抓紧时间,罗伯特机器人培训学校，试学一个月不收任何费用，两年包教会，其他的就不说了，抓紧时间</p>
+              <div class="ad-word2"><span class="money">18888元</span><p class="rebate"><span class="rebate1">预约返利10%</span><span class="rebate1">推荐返利8%</span></p></div>
+            </span>
+            <div class="operation"><p>删除</p><p>编辑</p></div>
+          </div>
+          <div class="right-nav-height">
+            <span class="checkbox"><input type="checkbox" name="" value=""></span>
+            <span class="adimg"><img src="images/img-05.png" alt=""></span>
+            <span class="ad">
+              <p class="ad-word1">罗伯特机器人培训学校，试学一个月不收任何费用，两年包教会，其他的就不说了，抓紧时间,罗伯特机器人培训学校，试学一个月不收任何费用，两年包教会，其他的就不说了，抓紧时间</p>
+              <div class="ad-word2"><span class="money">18888元</span><p class="rebate"><span class="rebate1">预约返利10%</span><span class="rebate1">推荐返利8%</span></p></div>
+            </span>
+            <div class="operation"><p>删除</p><p>编辑</p></div>
+          </div>
+          <div class="right-nav-height">
+            <span class="checkbox"><input type="checkbox" name="" value=""></span>
+            <span class="adimg"><img src="images/img-05.png" alt=""></span>
+            <span class="ad">
+              <p class="ad-word1">罗伯特机器人培训学校，试学一个月不收任何费用，两年包教会，其他的就不说了，抓紧时间,罗伯特机器人培训学校，试学一个月不收任何费用，两年包教会，其他的就不说了，抓紧时间</p>
+              <div class="ad-word2"><span class="money">18888元</span><p class="rebate"><span class="rebate1">预约返利10%</span><span class="rebate1">推荐返利8%</span></p></div>
+            </span>
+            <div class="operation"><p>删除</p><p>编辑</p></div>
+          </div>
+          <div class="right-nav-height">
+            <span class="checkbox"><input type="checkbox" name="" value=""></span>
+            <span class="adimg"><img src="images/img-05.png" alt=""></span>
+            <span class="ad">
+              <p class="ad-word1">罗伯特机器人培训学校，试学一个月不收任何费用，两年包教会，其他的就不说了，抓紧时间,罗伯特机器人培训学校，试学一个月不收任何费用，两年包教会，其他的就不说了，抓紧时间</p>
+              <div class="ad-word2"><span class="money">18888元</span><p class="rebate"><span class="rebate1">预约返利10%</span><span class="rebate1">推荐返利8%</span></p></div>
+            </span>
+            <div class="operation"><p>删除</p><p>编辑</p></div>
+          </div>
+        </div>
+        <div class="right-bottom">
+          <p>
+            <span><a href="#">全选</a></span>
+            <span>/</span>
+            <span><a href="#">取消</a></span>
+            <span class="remove"><a href="#">删除</a></span>
+          </p>
+        </div>
       </div>
+    </div>
+    <div class="footer">
+      <span>有利商城客户后台管理</span>
+      <span>上海佑佑信息科技有限公司开发</span>
     </div>
   </body>
 </html>
