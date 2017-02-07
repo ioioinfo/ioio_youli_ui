@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>有利商家已发布</title>
+    <title>有利商家后台管理</title>
     <style media="screen">
     *{
        padding: 0;
@@ -212,44 +212,42 @@
 
       }
       .right-nav span:first-child{
-        width: 4.57875%;
+        width: 50px;
       }
       .right-nav span:nth-child(4n+2){
-        width: 11.17216%;
+        width: 122px;
       }
       .right-nav span:nth-child(4n+3){
-        width:69.230769%;
+        width: 756px;
       }
       .right-nav span:last-child{
-        width: 11.17216%;
+        width: 122px;
       }
       .right-nav-height{
-        width: 100%;
         height: 118px;
         border-bottom: 1px solid #f7f2f7;
       }
       .right-nav-height .checkbox{
-        width: 4.65116%;
+        width: 50px;
         text-align: center;
         display: inline-block;
       }
       .right-nav-height .adimg img{
         display: inline-block;
-        width: 100%;
+        width: 122px;
         height: 98px;
         vertical-align: middle;
       }
       .right-nav-height .adimg{
-        width: 11.348837%;
+        width: 122px;
         height: 98px;
         display: inline-block;
       }
       .right-nav-height .ad{
-        width:756px;
+        width:70.32558%;
         height: 118px;
         display: inline-block;
         vertical-align: middle;
-        margin-left: 25px;
       }
       .right-nav-height .ad .ad-word1{
         width:100%;
@@ -265,27 +263,33 @@
 	  .right-nav-height .ad .ad-word1 img{
 		  vertical-align: middle;
 	  }
-      .right-nav-height .ad .ad-word2{
-        width:100%;
-        font-size: 12px;
-        display: inline-block;
-        overflow: hidden;
-      }
-      .right-nav-height .ad .ad-word2 .money{
-		    display: inline-block;
-	      color: #e51c23;
-	      line-height: 28px;
-        margin-left: 100px;
-      }
-      .right-nav-height .ad .ad-word2 .rebate{
-        display: inline-block;
-        font-size: 12px;
-        margin-left: 50px;
+    .right-nav-height .ad .ad-word2{
+      width:100%;
+      font-size: 12px;
+      display: inline-block;
+      overflow: hidden;
+    }
+    .right-nav-height .ad .ad-word2{
+      width:100%;
+      font-size: 12px;
+      display: inline-block;
+      overflow: hidden;
+    }
+    .right-nav-height .ad .ad-word2 .money{
+      display: inline-block;
+      color: #e51c23;
+      line-height: 28px;
+      margin-left: 100px;
+    }
+    .right-nav-height .ad .ad-word2 .rebate{
+      display: inline-block;
+      font-size: 12px;
+      margin-left: 50px;
 
-      }
+    }
       .right-nav-height .ad .ad-word2 .rebate .rebate1{
         display: inline-block;
-        width: 95px;
+        width: 78px;
         border: 1px solid #646464;
         text-align: center;
         margin-right: 10px;
@@ -305,7 +309,7 @@
         font-size: 14px;
         margin: 15px auto;
         text-align: center;
-		    cursor: pointer;
+		cursor: pointer;
 
       }
       .right-nav-height .operation p:first-child{
@@ -367,12 +371,12 @@
         margin: 0 15px;
 
       }
-	  .warp .images {
+	    .warp .images {
 	    margin-top: 100px;
 	    margin-left: 462px;
-	 }
+	    }
 	  /*<!-- 确认金额 -->*/
-	 .weui_mask {
+	   .weui_mask {
 		 position: fixed;
 		 z-index: 10;
 		 width: 100%;
@@ -380,7 +384,7 @@
 		 top: 0;
 		 left: 0;
 		 background: rgba(0, 0, 0, 0.6);
-	 }
+	   }
 	 .weui_dialog {
 		 position: fixed;
 		 z-index: 13;
@@ -392,6 +396,8 @@
 		 background-color: #FAFAFC;
 		 border-radius: 3px;
 		 overflow: hidden;
+		 background: url(images/bg01.png) no-repeat;
+		 background-size:100% 100%;
 		 width: 370px;
 		 height: 200px;
 	 }
@@ -401,7 +407,8 @@
 		 font-size: 24px;
 	 }
 	 .jine{
-		 margin-left: 12px;
+	     margin-top: 15px;
+		 margin-left: 74px;
 		 width: 165px;
 		 padding: 2px;
 		 height: 24px;
@@ -492,12 +499,23 @@
 	   margin-bottom: 35px;
 
 	 }
+	 #jine_cancel{
+		background: #ffbd0f;
+	 }
+	 #jine_enter{
+	   background: #00ff00;
+	 }
 	 .zero{
 	   font-size: 18px;
 	   color: #000;
 	   text-align: center;
 	   padding: 15px 0;
 	 }
+
+   /*文字信息*/
+   .top .right-nav .word-information{
+     width:69.230769%;
+   }
     </style>
 
 
@@ -565,36 +583,26 @@
           </ul>
         </div>
 
-<div class="right-nav">
-  <span>选择</span><span>图片</span><span>文字信息</span><span>操作</span>
-</div>
-<div class="warp">
+        <div class="right-nav">
+          <span>&nbsp;</span><span>图片</span><span class="word-information">文字信息</span>
+        </div>
+        <div class="warp">
 
 
 	  <div class="right-nav-height">
-		<span class="checkbox"><input type="checkbox" name="" value=""></span>
+		<span class="checkbox"></span>
 		<span class="adimg"><img src="http://211.149.248.241:8000/images/youli/project2-image.png" alt=""></span>
 		<span class="ad">
-		  <p class="ad-word1">考研英语政治强化集训营2 &nbsp;(&nbsp;封闭教学，熟悉命题，提高技巧&nbsp;)&nbsp;电话：13812345678</p>
-		  <p class="ad-word1">湖北省武汉市青山区建设六路红钢二街钢城五中旁武汉新东方学校</p>
-      <p class="ad-word1"></p>
+		  <p class="ad-word1"><img src="http://wx.qlogo.cn/mmopen/KIyCe3bOICnTux8jjXeB9Q8MciaYStQibjojibHoiaUjCPK7gtycM2jcicc3pGSS38K4GtpeqVykKs7tJRz4sJ0xAnV1I7ye0Kvop/0" width="20px" alt=""/> 金志明&nbsp; 小马哥 &nbsp; 18221036882 </p>
+		  <p class="ad-word1">考研英语政治强化集训营2&nbsp;湖北省武汉市青山区建设六路红钢二街钢城五中旁武汉新东方学校 </p>
+		  <p class="ad-word1">预约时间：&nbsp;2017-02-07 09:50:01&nbsp;</p>
+
 		  <div class="ad-word2"><span class="money">16800元</span><p class="rebate"><span class="rebate1">预约返利10%</span><span class="rebate1">推荐返利5%</span></p></div>
 		</span>
-		<div class="operation"><p class="shelve" data-id="8">下架</p></div>
 	  </div>
 
 
 </div>
-
-<div class="right-bottom">
-  <p>
-	<span><a href="#">全选</a></span>
-	<span>/</span>
-	<span><a href="#">取消</a></span>
-	<span class="remove"><a href="#">删除</a></span>
-  </p>
-</div>
-
 
       </div>
     </div>
@@ -608,22 +616,7 @@
 
 <script>
 	$(function() {
-		$(".list-infor5").addClass("hover");
-		$(".shelve").click(function(){
-			var r = confirm("是否确认下架？下架后重新上架需要管理员重新审核！");
- 			if (!r) {
-				return;
-			}
-			var project_id = $(this).data("id");
-			$.post("/down_project",{"project_id":project_id},function(data){
-				if (data.success) {
-					alert("下架成功！");
-					location.href ="/approve_projects";
-				}else {
-					alert("下架失败!");
-				}
-			});
-		});
+		$(".list-infor2").addClass("hover");
 	});
 </script>
 
