@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>我的推荐</title>
+        <script src="js/react.min.js"></script>
+        <script src="js/react-dom.min.js"></script>
+        <script src="js/browser.min.js"></script>
+        <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <style media="screen">
+            @media screen and (max-width:640px){
+                *{
+                  padding: 0;
+                  margin: 0;
+                }
+                html,body{
+                  margin: 0;
+                  padding: 0;
+                  width: 100%;
+                  height: 100%;
+                  font-family: "\5FAE\8F6F\96C5\9ED1","微软雅黑" Tahoma, Verdana, sans-serif, ;
+                  background: #EEEEEE;
+                  position: relative;
+                }
+                a{
+                  text-decoration: none;
+                }
+                ::-webkit-scrollbar {
+                    display: none;
+                }
+                li{
+                    list-style: none;
+                    font-size: 12px;
+                }
+                .header{
+                    margin-top: 15px;
+                    height:35px;
+                    line-height: 35px;
+                    font-size: 14px;
+                    color: #000;
+                    font-weight: 400;
+                    text-indent: 4%;
+                    border-top: 1px solid #999797;
+                    border-bottom: 1px solid #999797;
+                    background: #fff;
+                }
+                .Amountinfor_ul{
+                    margin-top: 15px;
+                }
+                .Amountinfor_li{
+                    width: 92%;
+                    margin: 0 auto 10px;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+                    background: #fff;
+                    padding: 4px 6px;
+                    border-radius: 4px;
+                }
+                .Amountinfor_img{
+                    float: left;
+                    width: 20.289855%;
+                    height: 70px;
+                }
+                .Amountinfor_img img{
+                    width: 100%;
+                    height: 70px;
+                }
+                .Amountinfor_li_right{
+                    float: right;
+                    width: 70%;
+                }
+                .Amountinfor_li_p1{
+                    font-size: 16px;
+                    height: 18px;
+                    line-height: 18px;
+                    overflow: hidden;
+                }
+                .Amountinfor_li_p1 span:last-child{
+                    font-size: 14px;
+                    float: right;
+                    margin-right: 10px;
+                }
+                .Amountinfor_li_p2 span{
+                    display: inline-block;
+                    height: 34px;
+                    line-height: 34px;
+                    font-size: 14px;
+                    color: #F10909;
+                }
+                .Amountinfor_li_p3{
+                    height: 18px;
+                    line-height: 18px;
+                    color: #666;
+                }
+                .footer{
+                    width: 94%;
+                    height: 35px;
+                    line-height: 35px;
+                    font-size: 14px;
+                    background: rgb(112,180,44);
+                    border-radius: 4px;
+                    color: #fff;
+                    text-align: center;
+                    position: fixed;
+                    bottom: 5px;
+                    left: 3%;
+                }
+                /*导航*/
+                .amountnav{
+                    width: 92%;
+                    margin: 20px  auto;
+                    border: 1px solid rgb(112,180,44);
+                    border-radius: 4px;
+                }
+                .amountnav p{
+                    display: inline-block;
+                    width: 50%;
+                    text-align: center;
+                    font-size: 14px;
+                    height: 30px;
+                    line-height: 30px;
+                }
+                .amountnav .amountnav_p1{
+                    background:rgb(112,180,44);
+                    color: #fff;
+                }
+                .Amountinfor_li_right .isok{
+                    margin-right: 10px;
+                    color: rgb(112,180,44);
+                }
+                .Amountinfor_li_bottom{
+                    padding: 2px 4px;
+                    color: #999;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="example"></div>
+        <script type="text/babel">
+        // 账单
+        class Amount extends React.Component {
+          render() {
+              return (
+                <div className="amount">
+                    <Amountinfor/>
+                </div>
+              );
+          }
+        };
+
+        // 收入记录
+        class Amountinfor extends React.Component {
+          constructor(props) {
+              super(props);
+              this.state = {amountitem:[]};
+          }
+          componentDidMount(){
+              var amountitem=[{img:"images/img-15.jpg",name1:"新东方",name2:"考研英语政治强化集训营",name3:"baoge", money:"100",time:"2017 / 3 / 22"},
+                                {img:"images/img-15.jpg",name1:"新东方",name2:"考研英语政治强化集训营",name3:"baoge", money:"100",time:"2017 / 3 / 22"}];
+              this.setState({amountitem:amountitem});
+          }
+          render() {
+              return (
+                <ul className="Amountinfor_ul">
+                    {this.state.amountitem.map(item => (
+                        <AmountinforLi item={item} />))
+                    }
+                </ul>
+              );
+          }
+        };
+        class AmountinforLi extends React.Component {
+          render() {
+              return (
+                <li className="Amountinfor_li">
+                    <p className="Amountinfor_li_bottom">{this.props.item.time}</p>
+                    <div className="Amountinfor_img"><img src={this.props.item.img} alt="" /></div>
+                    <div className="Amountinfor_li_right">
+                        <p className="Amountinfor_li_p1"><span>{this.props.item.name1}</span><span>({this.props.item.name2})</span></p>
+                        <p className="Amountinfor_li_p2">+ 返利 : &nbsp;￥<span>{this.props.item.money}</span></p>
+                        <p className="Amountinfor_li_p3">被推荐人：{this.props.item.name3}</p>
+                    </div>
+
+                </li>
+              );
+          }
+        };
+
+        ReactDOM.render(
+          <Amount/>,
+          document.getElementById("example")
+        );
+        </script>
+    </body>
+</html>
