@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>绑定银行卡</title>
+        <script src="js/react.min.js"></script>
+        <script src="js/react-dom.min.js"></script>
+        <script src="js/browser.min.js"></script>
+        <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <style media="screen">
+        @media screen and (max-width:640px){
+            *{
+              padding: 0;
+              margin: 0;
+            }
+            html,body{
+              margin: 0;
+              padding: 0;
+              width: 100%;
+              height: 100%;
+              font-family: "\5FAE\8F6F\96C5\9ED1","微软雅黑" Tahoma, Verdana, sans-serif, ;
+              background: #f3f3f3;
+              position: relative;
+            }
+            a{
+              text-decoration: none;
+            }
+            ::-webkit-scrollbar {
+                display: none;
+            }
+            li{
+                list-style: none;
+                font-size: 12px;
+            }
+
+            .footer{
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                font-size: 14px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: #01A9F2;
+                text-align: center;
+                color: #fff;
+            }
+            .cardInfor{
+                width: 94%;
+                margin: 0 auto;
+            }
+            .cardInfor .warning{
+                color: #8C8C8C;
+                padding-top: 20px;
+            }
+            .cardInput{
+                background: #fff;
+                color: #101010;
+                border-radius: 4px;
+                text-indent: 10px;
+                margin-top: 20px;
+            }
+            .cardInput p{
+                height: 40px;
+                line-height: 40px;
+                border-bottom: 1px solid #F4F4F4;
+            }
+            .cardInput p input{
+                width: 60%;
+                border: none;
+                text-indent: 10px;
+                outline: none;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div id="example"></div>
+        <script type="text/babel">
+        class Card extends React.Component {
+
+          render() {
+              return (
+                  <div>
+
+                    <div className="cardInfor">
+                        <p className="warning">请绑定持卡人本人的银行卡</p>
+                        <div className="cardInput">
+                            <p>持卡人：<input type="text" name="" placeholder="张三" /></p>
+                            <p>开户行：<input type="text" name="" placeholder="请输入开户行名称" /></p>
+                            <p>卡号：<input type="text" name="" placeholder="请输入银行卡帐号" /></p>
+                        </div>
+                    </div>
+                    <Footer/>
+                  </div>
+              );
+          }
+        };
+
+        class Footer extends React.Component {
+          render() {
+              return (
+                <div className="footer">
+                    提交
+                </div>
+              );
+          }
+        };
+        ReactDOM.render(
+          <Card/>,
+          document.getElementById("example")
+        );
+        </script>
+    </body>
+</html>
