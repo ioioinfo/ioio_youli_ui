@@ -24,13 +24,14 @@
         .wrap{
             width: 90%;
             margin: 0 auto;
+            overflow: hidden;
         }
         .Left{
           width: 16%;
           height: 700px;
           background: #666;
           display: inline-block;
-
+          float: left;
         }
         .leftHeader{
           width: 100%;
@@ -67,6 +68,7 @@
             color: #fff;
             font-size: 14px;
             font-weight: normal;
+            margin-bottom: 30px;
         }
         .leftBottom_li .leftBottom_li_span1{
             display: inline-block;
@@ -92,6 +94,34 @@
             margin-left: 15px;
 
         }
+        .Right{
+            width: 84%;
+            float: left;
+        }
+        .RightTop{
+            display: flex;
+            height: 100px;
+            border-bottom: 1px solid #f0e6f0;
+            box-shadow: 0 5px 0 #f7f5f7;
+        }
+        .RightTopUl{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .RightTopUl li{
+            width: 100px;
+            height: 60px;
+            text-align: center;
+            background: #da6e6b;
+            line-height: 60px;
+            color: #fff;
+            border-radius: 4px;
+        }
+        .RightTopUl .RightTopLi2{
+            background: #7278b2;
+        }
         </style>
     </head>
     <body>
@@ -103,6 +133,7 @@
               return (
                 <div className="wrap">
                   <Left/>
+                  <Right/>
                 </div>
               );
           }
@@ -114,7 +145,10 @@
                 this.state = {leftItems: []};
             }
             componentDidMount(){
-                var leftItem=[{img:"images/img-02.png",name:"返利申请",news:"99"}];
+                var leftItem=[{type:"1", img:"images/img-02.png",name:"返利申请",news:"99"}
+                    ,{type:"2", img:"images/img-01.png",name:"返利成功",news:"99"}
+                    ,{type:"1", img:"images/img-03.png",name:"客户申诉",news:"99"}
+                    ,{type:"2", img:"images/img-04.png",name:"返利统计",news:"99"}];
                 this.setState({leftItems:leftItem});
             }
           render() {
@@ -144,12 +178,63 @@
         // 左边下面的导航li
         class LeftBottomLi extends React.Component {
           render() {
+              var d=""
+              if(this.props.item.type=="1"){
+                  d=<span className="leftBottom_li_span3">{this.props.item.news}</span>;
+              }
               return (
                 <li className="leftBottom_li">
                   <span className="leftBottom_li_span1"><img src={this.props.item.img} alt="" /></span>
                   <span className="leftBottom_li_span2">{this.props.item.name}</span>
-                  <span className="leftBottom_li_span3">{this.props.item.news}</span>
+                  {d}
                 </li>
+              );
+          }
+        };
+        // 右边
+        class Right extends React.Component {
+          render() {
+
+              return (
+                <div className="Right">
+                    <RightTop/>
+                </div>
+
+              );
+          }
+        };
+        // 右边头部
+        class RightTop extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {rightItems: []};
+            }
+            componentDidMount(){
+                var rightItem=[{word:"创建项目",id:"1"},{word:"客户预约",id:"2"},{word:"客户预约",id:"3"},{word:"客户预约",id:"4"},{word:"客户预约",id:"5"},{word:"客户预约",id:"6"},{word:"客户预约",id:"7"},];
+                this.setState({rightItems:rightItem});
+            }
+          render() {
+
+              return (
+                <div className="RightTop">
+                    <ul className="RightTopUl">
+                        {this.state.rightItems.map(item => (
+                            <RightTopLl item={item} />
+                          ))
+                        }
+                    </ul>
+                </div>
+              );
+          }
+        };
+        class RightTopLl extends React.Component {
+          render() {
+              var e="";
+              if(this.props.item.id=="2"){
+                  e="RightTopLi2";
+              }
+              return (
+                <li className={e}>{this.props.item.word}</li>
               );
           }
         };
