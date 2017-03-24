@@ -13,6 +13,7 @@
         min-width: 1024px;
         max-width: 1300px;
         margin: 0 auto;
+        position: relative;
       }
       li{
         list-style: none;
@@ -55,6 +56,7 @@
         width: 60px;
         border-radius: 50%;
         vertical-align: middle;
+        cursor: pointer;
       }
       .header-right{
         font-size: 14px;
@@ -227,133 +229,6 @@
 	    margin-top: 100px;
 	    margin-left: 462px;
 	 }
-	  /*<!-- 确认金额 -->*/
-	 .weui_mask {
-		 position: fixed;
-		 z-index: 10;
-		 width: 100%;
-		 height: 100%;
-		 top: 0;
-		 left: 0;
-		 background: rgba(0, 0, 0, 0.6);
-	 }
-	 .weui_dialog {
-		 position: fixed;
-		 z-index: 13;
-		 width: 896px;
-		 top: 50%;
-		 left: 53%;
-		 -webkit-transform: translate(-50%, -50%);
-		 transform: translate(-50%, -50%);
-		 background-color: #FAFAFC;
-		 border-radius: 3px;
-		 overflow: hidden;
-		 width: 370px;
-		 height: 200px;
-	 }
-	 .get_jine{
-		 height: 75px;
-		 margin: 30px;
-		 font-size: 24px;
-	 }
-	 .jine{
-		 margin-left: 12px;
-		 width: 165px;
-		 padding: 2px;
-		 height: 24px;
-		 font-size: 16px;
-	 }
-	 .jine_button{
-		 width: 94px;
-		 font-size: 16px;
-		 height: 30px;
-		 float: left;
-		 line-height: 30px;
-		 border: 1px solid #CECECE;
-		 margin-left: 62px;
-		 cursor: pointer;
-		 text-align: center;
-	 }
-
-	 /*<!-- 弹出层填写相信信息 -->*/
-	 .ad-infor{
-	   width: 760px;
-	   height: 589px;
-	   overflow: auto;
-	   background: url(images/img-13.png) no-repeat 0 0;
-	   background-size: cover;
-	   position: absolute;
-	   top: 110px;
-	   left: 355px;
-	   display: none;
-	 }
-	 .ad-infor-next{
-	   margin-top: 20px;
-	 }
-	 .ad-infor-next .one{
-	   width: 100px;
-	   min-height: 28px;
-	   display: inline-block;
-	   font-size: 14px;
-	   color: #000;
-	   /*vertical-align: middle;*/
-	   text-indent: 15px;
-	 }
-	 .ad-infor-next .two{
-	   width: 530px;
-	   min-height: 28px;
-	   border: 1px solid #D9D9D9;
-	   display: inline-block;
-	   outline-style: none;
-	   overflow:hidden;
-	   vertical-align: middle;
-	   margin-left: 50px;
-	 }
-	 .ad-infor-next .three{
-	   width: 530px;
-	   min-height: 45px;
-	   border: 1px solid #D9D9D9;
-	   display: inline-block;
-	   outline-style: none;
-	   overflow:auto;
-	   vertical-align: middle;
-	   margin-left: 50px;
-	 }
-	 .ad-infor-next .four{
-	   width: 530px;
-	   display: inline-block;
-	   outline-style: none;
-	   font-size: 14px;
-	   padding: 5px 0 5px 5px;
-	   margin-left: 50px;
-	   vertical-align: middle;
-	   overflow:auto;
-	   background: #fff;
-	 }
-	 .ad-infor-next .five{
-	   width:85px;
-	   height: 35px;
-	   line-height: 35px;
-	   cursor: pointer;
-	 }
-	 .ad-infor-next .five-backgroung{
-	   background:transparent;
-	   border: 1px solid transparent;
-	   outline-style: none;
-
-	 }
-	 .float-right{
-	   float: right;
-	   margin-right: 70px;
-	   margin-bottom: 35px;
-
-	 }
-	 .zero{
-	   font-size: 18px;
-	   color: #000;
-	   text-align: center;
-	   padding: 15px 0;
-	 }
 
 
      /*右边表格部分*/
@@ -408,6 +283,80 @@
          -webkit-transform:scale(1.2) rotate(10deg);
          -moz-transform:scale(1.2) rotate(10deg);
          -o-transform:scale(1.2) rotate(10deg);
+     }
+
+     /*用户信息*/
+     .user{
+         width: 200px;
+         height: 175px;
+         background:#fff;
+         position: absolute;
+         top: 96px;
+         left: 29px;
+         z-index: 999;
+         font-size: 12px;
+         box-sizing: border-box;
+         padding:0 5px;
+         border-radius: 4px;
+         display: none;
+     }
+     .user p{
+         color: #666;
+         margin: 10px 0;
+     }
+     .user p input{
+         width: 135px;
+     }
+
+     .user .user-submit{
+         text-align: right;
+         margin: 20px auto;
+
+     }
+     .user .user-submit input{
+          width: 50px;
+          cursor: pointer;
+     }
+
+     /*确认发放*/
+     .grant{
+         width: 100px;
+         height: 100px;
+         background: #fff;
+         border-radius: 4px;
+         position: absolute;
+         top: 200px;;
+         left: 50%;
+         z-index: 999;
+         display: none;
+     }
+     .grant p{
+         font-size: 14px;
+         color: #666;
+         text-align: center;
+         margin-top: 20px;
+     }
+     .grant p input:first-child{
+         margin-right: 10px;
+         margin-top: 15px;
+         cursor: pointer;
+     }
+     .grant p input:last-child{
+         margin-left: 10px;
+         cursor: pointer;
+     }
+     .toumingceng{
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         height: 100%;
+         width: 100%;
+         background: #808080;
+         opacity: 0.5;
+         z-index: 9;
+         display: none;
      }
     </style>
 
@@ -539,37 +488,47 @@
       <span>有利商城客户后台管理</span>
       <span>上海佑佑信息科技有限公司开发</span>
     </div>
-	<script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+
+    <!-- 用户信息 -->
+    <div class="user">
+        <p>编号：     &nbsp;<input type="text" name="" value="001"></p>
+        <p>用户名：<input type="text" name="" value="XXx"></p>
+        <p>帐号:    &nbsp;&nbsp;<input type="text" name="" value="xxxxxxx"></p>
+        <p>密码:    &nbsp;&nbsp;<input type="text" name="" value="xxxxxxxxx"></p>
+        <p class="user-submit"><input type="submit" name="" value="注 销" ></p>
+    </div>
+
+    <!-- 确认发放 -->
+    <div class="grant">
+        <p>已发放？</p>
+        <p><input type="submit" name="" value="是" class="grant-submit1"><input type="submit" name="" value="否" class="grant-submit1"></p>
+    </div>
+    <div class="toumingceng"> </div>
+	<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
 	<script src="js/jquery.ui.widget.js" type="text/javascript"></script>
 	<script src="js/jquery.fileupload.js" type="text/javascript"></script>
 
 <script>
 	$(function() {
-		$(".fan1").addClass("bottom-ul-style");
-		$(".sure").click(function(){
-			var project_subscribe_id = $(this).data("id");
-			$(".jine_info").removeAttr("style");
-			$(".jine").focus();
-
-			$("#jine_enter").click(function(){
-				var contract_amount = $(".jine").val();
-				if (!contract_amount) {
-					alert("请输入消费金额！");
-					return;
-				}
-				$.post("/confirm_order",{"contract_amount":contract_amount,"project_subscribe_id":project_subscribe_id},function(data){
-					if (data.success) {
-						alert("操作成功！");
-						location.href ="/daiqueren";
-					}else {
-						alert("操作失败！");
-					}
-				})
-			});
-			$("#jine_cancel").click(function(){
-				$(".jine_info").attr("style","display:none;");
-			});
-		});
+        $(".header-left").click(function(){
+            $(".user").toggle();
+        });
+        $(".table-submit").click(function(){
+            $(".grant").show();
+            $(".toumingceng").show();
+        });
+        $(".grant-submit1").click(function(){
+            $(".grant").hide();
+            $(".toumingceng").hide();
+        });
+        $(".grant-submit2").click(function(){
+            $(".grant").hide();
+            $(".toumingceng").hide();
+        })
+        $(".toumingceng").click(function(){
+            $(".grant").hide();
+            $(".toumingceng").hide();
+        })
 	});
 </script>
 
