@@ -240,10 +240,13 @@
 
      /*右边表格部分*/
      .right-table{
-         width: 100%;
+         width: 80%;
          height: 551px;
          box-sizing: border-box;
          overflow: auto;
+         margin: 0 auto;
+         border-left: 1px solid #f7f2f7;
+         border-right: 1px solid #f7f2f7;
      }
      .right-table .table-head{
         width: 100%;
@@ -268,6 +271,7 @@
          height: 45px;
          line-height: 45px;
          font-size: 12px;
+         border-bottom: 1px solid #f7f2f7;
      }
      .table-infor li input{
          vertical-align: middle;
@@ -294,14 +298,44 @@
          -o-transform:scale(1.2) rotate(10deg);
      }
 
+
+     .right .right-bottom{
+       width: 96%;
+       margin: 0 auto;
+       height: 46px;
+       line-height: 46px;
+       text-align: right;
+       background: #eff2f7;
+     }
+     .right .right-bottom p{
+       display: inline-block;
+       margin-right: 40px;
+     }
+     .right .right-bottom p span a{
+       font-size: 12px;
+       color: #03a9f4;
+     }
+     .right .right-bottom p span{
+       font-size: 12px;
+       color: #03a9f4;
+       display: inline-block;
+       margin-right: 5px;
+     }
+     .right .right-bottom p .remove a{
+       color: #ff4081;
+     }
+     .right .right-bottom p .remove{
+       cursor: pointer;
+       margin-left: 15px;
+     }
      /*用户信息*/
      .user{
          width: 200px;
          height: 175px;
          background:#fff;
          position: absolute;
-         top: 96px;
-         left: 5px;
+         top: 200px;
+         left: 500px;
          z-index: 999;
          font-size: 12px;
          box-sizing: border-box;
@@ -335,8 +369,6 @@
           width: 50px;
           cursor: pointer;
      }
-
-
      .toumingceng{
          position: absolute;
          top: 0;
@@ -350,52 +382,7 @@
          z-index: 9;
          display: none;
      }
-     .right .right-bottom{
-       width: 96%;
-       margin: 0 auto;
-       height: 46px;
-       line-height: 46px;
-       text-align: right;
-       background: #eff2f7;
-     }
-     .right .right-bottom p{
-       display: inline-block;
-       margin-right: 40px;
-     }
-     .right .right-bottom p span a{
-       font-size: 12px;
-       color: #03a9f4;
-     }
-     .right .right-bottom p span{
-       font-size: 12px;
-       color: #03a9f4;
-       display: inline-block;
-       margin-right: 5px;
-     }
-     .right .right-bottom p .remove a{
-       color: #ff4081;
-     }
-     .right .right-bottom p .remove{
-       cursor: pointer;
-       margin-left: 15px;
-     }
 
-     /*编辑*/
-     .bianji{
-         width: 300px;
-         height: 245px;
-         display: none;
-         position: absolute;
-         top: 250px;
-         left: 500px;
-         padding: 0 40px;
-     }
-     .bianji p{
-         overflow: hidden;
-     }
-     .bianji p input{
-         float: right;
-     }
     </style>
 
 
@@ -465,107 +452,67 @@
 
             <div class="right-table">
                 <ul class="table-head">
-                    <li>编号</li>
-                    <li>商品名称</li>
-                    <li>简称</li>
-                    <li>申请日期</li>
-                    <li>保证金</li>
-                    <li>行业</li>
-                    <li>操作</li>
+                    <li>序号</li>
+                    <li>项目名称</li>
+                    <li>返利人数</li>
+                    <li>返利金额</li>
                 </ul>
                 <ul class="table-infor">
                     <li>001</li>
-                    <li><img src="images/personImg.jpg" alt="" /></li>
-                    <li>XXXX</li>
-                    <li>181***3323</li>
-                    <li>12345***3214</li>
-                    <li>1000.00</li>
-                    <li><input type="submit" name="" value="编 辑" class="table-submit"></li>
+                    <li>新东方</li>
+                    <li>1</li>
+                    <li>1000</li>
                 </ul>
 
 
             </div>
-            <div class="jine_info" style="display:none;">
-                <div class="weui_mask"></div>
-                <div class="weui_dialog">
-    	               <div class="get_jine">
-                          <span>&nbsp;</span> <input class="jine" type="text" value="" placeholder="请输入消费金额"/>
-                       </div>
-	                   <div>
-                		  <div class="jine_button" id="jine_enter">确定</div>
-                		  <div class="jine_button" id="jine_cancel">取消</div>
-    	               </div>
-                </div>
-            </div>
+
              <div class="right-bottom">
-                <p>
-        	       <span class="remove">新 建</span>
-                </p>
+                 <p>
+                   <span><a href="#">全选</a></span>
+                   <span>/</span>
+                   <span><a href="#">取消</a></span>
+                   <span class="remove"><a href="#">删除</a></span>
+                 </p>
              </div>
 
       </div>
     </div>
-    <div class="footer">
-      <span>有利商城客户后台管理</span>
-      <span>上海佑佑信息科技有限公司开发</span>
-    </div>
-
     <!-- 用户信息 -->
     <div class="user user1">
         <p>编号：     &nbsp;<input type="text" name="" value="001"></p>
         <p>用户名：<input type="text" name="" value="XXx"></p>
         <p>帐号:    &nbsp;&nbsp;<input type="text" name="" value="xxxxxxx"></p>
         <p>密码:    &nbsp;&nbsp;<input type="text" name="" value="xxxxxxxxx"></p>
-        <p class="user-submit"><input type="submit" name="" value="设 置" ><input type="submit" name="" value="确 定"  class="user-submit1 user-submit2"></p>
+        <p class="user-submit"><input type="submit" name="" value="注 销" ><input type="submit" name="" value="确 定"  class="user-submit1 user-submit2"></p>
     </div>
-    <!-- 编辑 -->
-    <div class="user bianji">
-        <p>编号：<input type="text" name="" value="001"></p>
-        <p>商户名称<input type="text" name="" value="XXx"></p>
-        <p>简称:<input type="text" name="" value="xxxxxxx"></p>
-        <p>申请日期:<input type="text" name="" value="xxxxxxxxx"></p>
-        <p>保证金:<input type="text" name="" value="xxxxxxxxx"></p>
-        <p>行业:<input type="text" name="" value="xxxxxxxxx"></p>
-        <p class="user-submit"><input type="submit" name="" value="确 定"  class="user-submit1 user-submit3"></p>
+    <div class="footer">
+      <span>有利商城客户后台管理</span>
+      <span>上海佑佑信息科技有限公司开发</span>
     </div>
 
-    <div class="toumingceng"> </div>
+    <div class="toumingceng"></div>
 	<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
 	<script src="js/jquery.ui.widget.js" type="text/javascript"></script>
 	<script src="js/jquery.fileupload.js" type="text/javascript"></script>
-
     <script>
-	$(function(){
-        // 个人信息
-        $(".header-right-submit").click(function(){
-            $(".user1").toggle();
-        });
-        // 编辑
-        $(".table-submit").click(function(){
-            $(".bianji").show();
-            $(".toumingceng").show();
-        });
-        $(".user-submit3").click(function(){
-            $(".bianji").hide();
-            $(".toumingceng").hide();
-        });
-        // 新建
-        $(".remove").click(function(){
-            $(".bianji").show();
-            $(".toumingceng").show();
-        });
-        $(".user-submit3").click(function(){
-            $(".bianji").hide();
-            $(".toumingceng").hide();
-        });
+    	$(function(){
+            // 个人信息
+            $(".header-right-submit").click(function(){
+                $(".user1").show();
+                $(".toumingceng").show();
+            });
+            $(".user-submit2").click(function(){
+                $(".user1").hide();
+                $(".toumingceng").hide();
+            });
+            $(".toumingceng").click(function(){
+                $(".user1").hide();
+                $(".toumingceng").hide();
+            });
+        })
+    </script>
 
-        // 透明层
-        $(".toumingceng").click(function(){
-            $(".bianji").hide();
-            $(".toumingceng").hide();
-        });
-    })
-</script>
 
   </body>
 </html>
