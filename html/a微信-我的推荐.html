@@ -140,6 +140,10 @@
                     padding: 10px 4px 4px;
                     color: #999;
                 }
+                .Amountinfor_li .Amountinfor_li_recommend span{
+                    display: inline-block;
+                    margin-right: 10px;
+                }
                 .Amountinfor_li .Amountinfor_li_bottom_infor{
                     overflow: hidden;
                 }
@@ -167,8 +171,8 @@
               this.state = {amountitem:[]};
           }
           componentDidMount(){
-              var amountitem=[{img:"images/img-15.jpg",name1:"新东方",name2:"考研英语政治强化集训营",name3:"baoge", money:"100",time:"2017 / 3 / 22"},
-                                {img:"images/img-15.jpg",name1:"新东方",name2:"考研英语政治强化集训营",name3:"", money:"100",time:"2017 / 3 / 22"}];
+              var amountitem=[{img:"images/img-15.jpg",name1:"新东方",name2:"考研英语政治强化集训营",name3:["baoge","baogebaoge"], money:"100",time:"2017 / 3 / 22"},
+                                {img:"images/img-15.jpg",name1:"新东方",name2:"考研英语政治强化集训营",name3:["老张","老李"], money:"100",time:"2017 / 3 / 22"}];
               this.setState({amountitem:amountitem});
           }
           render() {
@@ -183,11 +187,7 @@
         };
         class AmountinforLi extends React.Component {
           render() {
-              var name3=this.props.item.name3;
-              var a = <div className="Amountinfor_li_recommend">被推荐人：{this.props.item.name3}</div>;
-              if(name3==""){
-                  a="";
-              }
+
               return (
                 <li className="Amountinfor_li">
                     <p className="Amountinfor_li_bottom">{this.props.item.time}</p>
@@ -198,7 +198,12 @@
                             <p className="Amountinfor_li_p2">+ 返利 : &nbsp;￥<span>{this.props.item.money}</span></p>
                         </div>
                     </div>
-                    {a}
+                    <div className="Amountinfor_li_recommend">被推荐人：
+                    {this.props.item.name3.map(item => (
+                        <span>{item}</span>))
+                    }
+
+                    </div>
                 </li>
               );
           }
